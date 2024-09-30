@@ -69,13 +69,28 @@ function gameController() {
     if (board.placeMarker(row, col, getActivePlayer())) {
       if (isWin()) {
         console.log(`${getActivePlayer().getName()} wins!`);
+        console.log(board.printBoard());
         return;
+      } else if (isTie()) {
+        console.log(`Tie!`);
+        return;
+      } else {
+        switchPlayerTurn();
+        printBoard();
       }
-      switchPlayerTurn();
-      printBoard();
     }
   };
   // tie
+  const isTie = () => {
+    const temp = board.getBoard();
+    for (let i = 0; i < temp.length; i++) {
+      if (temp[i].some((item) => item === " ")) {
+        return false;
+      }
+    }
+    return true;
+  };
+
   // win
 
   const checkWin = (arr) => {
