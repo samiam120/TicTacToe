@@ -58,13 +58,13 @@ function gameController() {
 
   const printBoard = () => {
     board.printBoard();
-    console.log(`${activePlayer.getName()}'s turn....`);
+    console.log(`${activePlayer.getMarker()}'s turn....`);
   };
 
   const playRound = (row, col) => {
     if (board.placeMarker(row, col, getActivePlayer())) {
       if (isWin()) {
-        console.log(`${getActivePlayer().getName()} wins!`);
+        console.log(`${getActivePlayer().getMarker()} wins!`);
         console.log(board.printBoard());
         return "win";
       } else if (isTie()) {
@@ -147,7 +147,7 @@ function ScreenController() {
     const board = game.getBoard();
     const activePlayer = game.getActivePlayer();
 
-    playerTurnDiv.textContent = `${activePlayer.getName()}'s turn`;
+    playerTurnDiv.textContent = `${activePlayer.getMarker()}'s turn`;
 
     for (let i = 0; i < board.length; i++) {
       for (let j = 0; j < board[0].length; j++) {
@@ -168,7 +168,7 @@ function ScreenController() {
     const res = game.playRound(r, c);
     if (res === "win") {
       updateScreen();
-      playerTurnDiv.textContent = `${game.getActivePlayer().getName()} won!`;
+      playerTurnDiv.textContent = `${game.getActivePlayer().getMarker()} won!`;
       boardDiv.removeEventListener("click", clickHandlerBoard);
       return;
     } else if (res === "tie") {
