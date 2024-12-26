@@ -15,7 +15,6 @@ Gameboard Logic: Encapsulated the gameboard in an object to represent a 3x3 grid
 	  •	Validating winning conditions for rows, columns, and diagonals.
 	  •	Detecting tie scenarios.
    
-	  •	Integrating player actions with game logic.
 User Interface: Built a responsive UI to render the gameboard dynamically and enable user interactions:
 	•	Real-time updates to the gameboard as players make moves.
 	•	Displaying active player turns, winner announcements, and tie notifications.
