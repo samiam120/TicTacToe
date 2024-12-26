@@ -1,10 +1,6 @@
 # TicTacToe
-Tic tac Toe using html, css and js
 
 https://samiam120.github.io/TicTacToe/
-
-
-Tic-Tac-Toe Game
 
 Developed an interactive and modular Tic-Tac-Toe game using JavaScript, HTML, and CSS with a focus on scalability, maintainability, and minimal global code.
 
