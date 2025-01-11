@@ -20,8 +20,21 @@
   color: black;
   font-size: 75px;
   border: 2px solid black;
+transition: all 0.3s ease-in-out;
+transform: scale(1);
+&:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+}
 }
 
-.playerTurn {
+.playerTurn,
+.refresh {
   font-size: 40px;
 }
+
+
+.refresh{
+  margin-top: 20px;
+}
+

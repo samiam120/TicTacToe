@@ -24,7 +24,6 @@ function gameBoard() {
       return false;
     }
   };
-
   //printing out our current board to UI
   const printBoard = () => console.log(board);
 
@@ -185,3 +184,10 @@ function ScreenController() {
   updateScreen();
 }
 ScreenController();
+
+const refreshBtn = document.querySelector(".refresh");
+refreshBtn.addEventListener("click", () => {
+  const boardDiv = document.querySelector(".board");
+  boardDiv.textContent = "";
+  ScreenController();
+});
