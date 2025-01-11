@@ -187,7 +187,5 @@ ScreenController();
 
 const refreshBtn = document.querySelector(".refresh");
 refreshBtn.addEventListener("click", () => {
-  const boardDiv = document.querySelector(".board");
-  boardDiv.textContent = "";
-  ScreenController();
+  location.reload();
 });
